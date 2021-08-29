@@ -6,6 +6,7 @@ import { Goals } from "./Goals";
 import { Audition } from "./Audition";
 import { Channels } from "./Channels";
 import { Expences } from "./Expences";
+import { Portal } from './Portal';
 
 export const Content: React.FC = (): JSX.Element => {
   const { activeStep } = useSelector((state: RootState) => state.wizardStep);
@@ -25,6 +26,9 @@ export const Content: React.FC = (): JSX.Element => {
         break;
       case 4:
         content = <Expences />;
+        break;
+      case 5:
+        content = <Portal />;
         break;
     
       default:

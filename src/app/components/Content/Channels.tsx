@@ -16,7 +16,7 @@ import {
 import PushImg from "./images/push.png";
 
 export const Channels: React.FC = () => {
-  const [title, setTitle] = useState<string>("Курсы английсого онлайн");
+  const [title, setTitle] = useState<string>("Курсы английсого");
   const [description, setDescription] = useState<string>(
     "Взрослым английский для карьеры, путешествий и развлечений. Детям школьная программа и подготовка к экзаменам"
   );

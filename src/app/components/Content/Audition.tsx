@@ -16,7 +16,7 @@ import {
 } from "./styled";
 import { AuditionKind } from "./types";
 import ProfileImg from "./images/profile.png";
-import MapImg from "./images/map.png";
+import MapImg from "./images/map.jpg";
 
 export const Audition: React.FC = () => {
   const [kind, setKind] = useState<AuditionKind>("profile");
@@ -76,7 +76,7 @@ export const Audition: React.FC = () => {
             <MetricItem $color="#48AEC4">Семья</MetricItem>
           </div>
           <div style={{ margin: "0 auto" }}>
-            <img src={kind === "profile" ? ProfileImg : MapImg} />
+            <img style={{ maxWidth: "592px" }} src={kind === "profile" ? ProfileImg : MapImg} />
           </div>
         </div>
       </Container>

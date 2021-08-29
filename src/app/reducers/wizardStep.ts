@@ -21,6 +21,10 @@ const initialState: RootState.WizardStepState = {
       index: 4,
       name: "Затраты",
     },
+    {
+      index: 5,
+      name: "Портал",
+    },
   ],
 };
 
