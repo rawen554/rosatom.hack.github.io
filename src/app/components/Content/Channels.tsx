@@ -16,10 +16,8 @@ import {
 import PushImg from "./images/push.png";
 
 export const Channels: React.FC = () => {
-  const [title, setTitle] = useState<string>("Курсы английсого");
-  const [description, setDescription] = useState<string>(
-    "Взрослым английский для карьеры, путешествий и развлечений. Детям школьная программа и подготовка к экзаменам"
-  );
+  const [title, setTitle] = useState<string>("");
+  const [description, setDescription] = useState<string>("");
 
   return (
     <>
@@ -96,7 +94,14 @@ export const Channels: React.FC = () => {
             </div>
           </div>
           <div style={{ padding: 66, backgroundColor: "#F5F5F5", borderRadius: "12px" }}>
-            <img src={PushImg} />
+            <div style={{ position: "relative" }}>
+              <img src={PushImg} />
+              <div style={{ position: "absolute", top: "32px", left: "16px", height: "75px", width: "263px", backgroundColor: "#ffffff" }}>
+                <span style={{ fontWeight: 500, fontSize: 13, lineHeight: "20px" }}>{title}</span>
+                <br />
+                <span style={{ fontWeight: 400, fontSize: 12, lineHeight: "18px" }}>{description}</span>
+              </div>
+            </div>
           </div>
         </div>
       </Container>

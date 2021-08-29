@@ -13,6 +13,7 @@ import {
   MetricBlock,
   Info,
   MetricItem,
+  BlockButton,
 } from "./styled";
 import { AuditionKind } from "./types";
 import ProfileImg from "./images/profile.png";
@@ -70,6 +71,14 @@ export const Audition: React.FC = () => {
         </InfoMetrics>
         <div style={{ display: "flex", marginTop: "65px" }}>
           <div style={{ flexShrink: 0, flexBasis: "280px" }}>
+            <BlockHeader>
+              <BlockTitle>
+                Тэги
+              </BlockTitle>
+              <BlockButton>
+                Добавить
+              </BlockButton>
+            </BlockHeader>
             <MetricItem $color="#F6CE3D">Англия</MetricItem>
             <MetricItem $color="#F63D96">Путешествует</MetricItem>
             <MetricItem $color="#2CA763">Общение</MetricItem>

@@ -16,6 +16,7 @@ import {
 
 export const Expences: React.FC = () => {
   const [days, setDays] = useState<number>(30);
+  const [tariff, setTariff] = useState<number>(5);
 
   return (
     <>
@@ -38,17 +39,17 @@ export const Expences: React.FC = () => {
               </BlockHeader>
             </ContentBlock>
             <div style={{ marginTop: "16px" }}>
-              <SwitcherHalf $width="93px" $isActive>
+              <SwitcherHalf $width="93px" onClick={() => setTariff(5)} $isActive={tariff === 5}>
                 <Centered>
                 5 руб
                 </Centered>
               </SwitcherHalf>
-              <SwitcherHalf $width="93px">
+              <SwitcherHalf $width="93px" onClick={() => setTariff(15)} $isActive={tariff === 15}>
                 <Centered>
                 15 руб
                 </Centered>
               </SwitcherHalf>
-              <SwitcherHalf $width="93px">
+              <SwitcherHalf $width="93px" onClick={() => setTariff(25)} $isActive={tariff === 25}>
                 <Centered>
                 25 руб
                 </Centered>
@@ -69,12 +70,12 @@ export const Expences: React.FC = () => {
             <ContentBlock>
               <BlockHeader>
                 <ExpencesTitle>
-                Стоимость, план
+                Стоимость, план (85% отклик)
                 </ExpencesTitle>
               </BlockHeader>
             </ContentBlock>
             <ExpencesTitle>
-            22 500 руб 
+            {Math.floor(0.85 * 5000 * tariff * (days / 30))} руб. / мес.
             </ExpencesTitle>
           </ExpencesBlock>
           <InfoPanelCenterd>
