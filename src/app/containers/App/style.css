@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700');
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+button {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: none;
+  font-size: 100%;
+  vertical-align: baseline;
+  font-family: inherit;
+  font-weight: inherit;
+  color: inherit;
+  appearance: none;
+  font-smoothing: antialiased;
+}
+
+textarea, input, button, select { font-family: inherit; font-size: inherit; }
+
+body {
+  font: 14px 'Proxima Nova', Helvetica, Arial, sans-serif;
+  line-height: 1.4em;
+  background: #ffffff;
+  color: #333333;
+  margin: 0 auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-font-smoothing: antialiased;
+  -ms-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+  font-weight: 300;
+}
+
+button,
+input[type='checkbox'] {
+  outline: none;
+}
